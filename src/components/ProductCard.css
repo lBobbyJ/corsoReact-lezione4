@@ -1,0 +1,31 @@
+
+.container-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* gap: 16px; */
+    box-shadow: 0 0 5px #000;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.25s cubic-bezier(0.215, 0.610, 0.355, 1);
+    /* cursor: pointer; */
+}
+/* .container-card:hover{
+    transform: scale(0.98);
+} */
+
+
+.container-card__dettagli {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+.dettaglio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
