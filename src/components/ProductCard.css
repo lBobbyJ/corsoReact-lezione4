@@ -1,31 +1,48 @@
-
 .container-card {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* gap: 16px; */
     box-shadow: 0 0 5px #000;
     border-radius: 10px;
-    padding: 10px;
     transition: all 0.25s cubic-bezier(0.215, 0.610, 0.355, 1);
-    /* cursor: pointer; */
-}
-/* .container-card:hover{
-    transform: scale(0.98);
-} */
-
-
-.container-card__dettagli {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 15px;
+    overflow: hidden;
 }
 
-.dettaglio{
+
+.container-dettagli {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 15px;
+    /* height: 50px; */
+    width: 100%;
+    gap: 18px;
+    padding: 10px;
+}
+
+.container-card span {
+    flex: 1;
+}
+
+.wrapper-drag-handle {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    background-color: #1a1a1a;
+    cursor: grab;
+}
+
+.drag-handle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    height: 18px;
+    width: 15px;
+}
+
+.drag-handle span {
+    flex: unset;
+    background-color: #eeeff2;
+    height: 5px;
+    width: 5px;
 }
