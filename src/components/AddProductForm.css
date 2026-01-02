@@ -10,7 +10,8 @@
 
 .container-input{
     display: flex;
-    gap: 34px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 input{

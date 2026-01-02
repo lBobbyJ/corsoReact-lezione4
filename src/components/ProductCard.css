@@ -46,3 +46,19 @@
     height: 5px;
     width: 5px;
 }
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.item:nth-child(1){
+    text-align: center;
+}
+.item:nth-child(2){
+    text-align: center;
+}
+.item:nth-child(3) span:last-child,
+.item:nth-child(4) span:last-child{
+    font-style: italic;
+}

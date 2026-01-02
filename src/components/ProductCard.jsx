@@ -16,10 +16,10 @@ export default function ProductCard({ id, name, category, price, quantity, onDel
             </div>
 
             <div className='container-dettagli'>
-                <span className='item'>{name}</span>
-                <span className='item'>{category}</span>
-                <span className='item'>{price}</span>
-                <span className='item'>{quantity}</span>
+                <span className='item'><span>{name}</span></span>
+                <span className='item'><span>{category}</span></span>
+                <span className='item'><span style={{textAlign: "end"}}>{price}</span><span>€</span></span>
+                <span className='item'><span style={{textAlign: "end"}}>{quantity}</span><span>pcs</span></span>
 
                 <button className='btn' onClick={() => { onDelete(id) }}>Rimuovi</button>
             </div>

@@ -1,26 +1,34 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import ProductCard from './components/ProductCard'
 import AddProductForm from './components/AddProductForm'
+import FilterBar from './components/FilterBar'
+import ProductList from './components/ProductList'
 
 function App() {
 
   const [products, setProducts] = useState(() => {
     const savedProducts = localStorage.getItem("products");
-    return savedProducts ? JSON.parse(savedProducts) : [];
+    return savedProducts ? JSON.parse(savedProducts) : []
   })
 
   useEffect(() => {
     localStorage.setItem("products", JSON.stringify(products));
   }, [products]);
 
+  const [filters, setFilters] = useState(() => {
+    const savedFilters = localStorage.getItem("filters");
+    return savedFilters ? JSON.parse(savedFilters) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem("filters", JSON.stringify(filters));
+  }, [filters]);
+
   const handleAddProduct = (newProduct) => {
     setProducts(prev => [...prev, newProduct]);
   }
 
-  const handleDelete = (id) => {
+  const handleDeleteProduct = (id) => {
     setProducts((prev) => {
       return prev.filter(product => product.id !== id)
     })
@@ -31,14 +39,9 @@ function App() {
       <div className='container'>
         <AddProductForm onAdd={handleAddProduct} />
       </div>
-      <div className='container'>
-        <div className='wrapper-products'>
-          {
-            products.length > 0 ?
-              products.map(product => <ProductCard key={product.id} {...product} onDelete={handleDelete} />) :
-              <p>Nessun prodotto trovato</p>
-          }
-        </div>
+      <div className='container' style={{ padding: 0 }}>
+        <FilterBar filters={filters} onChangeFilters={setFilters} />
+        <ProductList products={products} filters={filters} onDelete={handleDeleteProduct} />
       </div>
     </div>
   )

@@ -1,0 +1,93 @@
+.container-filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 16px;
+    background-color: #1a1a1a;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset 0 0 5px #000;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: auto;
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter input{
+    width: 120px;
+}
+.filter input[type='number']{
+    width: 80px;
+}
+.filter .icon{
+    width: 48px;
+}
+.sort{
+    position: relative;
+}
+
+.btn-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    box-shadow: inset 0 0 2px #a8a8a8;
+}
+
+.sortMenu{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    top: 130%;
+    right: 0;
+    background-color: #242424;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #eeeff2;
+}
+.sortMenu--open{
+    display: flex;
+}
+
+.sortMenu li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-radius: 5px;
+    padding: 8px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+.sortMenu li:hover{
+    background-color: #1a1a1a;
+}
+
+.sortMenu svg{
+    width: 18px;
+}
+
+.line-separator{
+    width: 100%;
+    height: 1px;
+    background-color: #eeeff2;
+    margin: 5px 0;
+}
