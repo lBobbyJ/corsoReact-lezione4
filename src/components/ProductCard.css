@@ -8,6 +8,21 @@
     overflow: hidden;
 }
 
+.animationDelete{
+    animation-name: zoomOut;
+    animation-duration: 0.25s;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
 
 .container-dettagli {
     display: flex;

@@ -29,9 +29,11 @@ function App() {
   }
 
   const handleDeleteProduct = (id) => {
-    setProducts((prev) => {
-      return prev.filter(product => product.id !== id)
-    })
+    setTimeout(() =>
+      setProducts((prev) => {
+        return prev.filter(product => product.id !== id)
+      }), 250)
+    
   }
 
   return (

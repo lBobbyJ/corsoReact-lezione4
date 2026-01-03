@@ -1,7 +1,7 @@
-.container-filters{
+.container-filters {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
     padding: 16px;
@@ -10,7 +10,8 @@
     box-shadow: inset 0 0 5px #000;
 }
 
-.icon{
+
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,27 +19,30 @@
     height: auto;
 }
 
-.filter{
+.filter {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.filter input{
+.filter input {
     width: 120px;
 }
-.filter input[type='number']{
+
+.filter input[type='number'] {
     width: 80px;
 }
-.filter .icon{
+
+.filter .icon {
     width: 48px;
 }
-.sort{
+
+.sort {
     position: relative;
 }
 
-.btn-icon{
+.btn-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +54,7 @@
     box-shadow: inset 0 0 2px #a8a8a8;
 }
 
-.sortMenu{
+.sortMenu {
     position: absolute;
     display: none;
     justify-content: center;
@@ -63,11 +67,12 @@
     border-radius: 10px;
     box-shadow: 0 0 5px #eeeff2;
 }
-.sortMenu--open{
+
+.sortMenu--open {
     display: flex;
 }
 
-.sortMenu li{
+.sortMenu li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,17 +82,57 @@
     transition: all 0.25s ease-in-out;
     cursor: pointer;
 }
-.sortMenu li:hover{
+
+.sortMenu li:hover {
     background-color: #1a1a1a;
 }
 
-.sortMenu svg{
+.sortMenu svg {
     width: 18px;
 }
 
-.line-separator{
+.line-separator {
     width: 100%;
     height: 1px;
     background-color: #eeeff2;
     margin: 5px 0;
+}
+
+
+
+@media (max-width: 900px) {
+    .container-filters {
+        gap: 15px;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .filter {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container-filters {
+        justify-content: space-between;
+    }
+
+    .filter input {
+        width: 80px;
+    }
+
+    .filter input[type='number'] {
+        width: 40px;
+    }
+
+}
+
+@media (max-width: 465px) {
+
+    .filter input {
+        width: 65px;
+    }
+
 }

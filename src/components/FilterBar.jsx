@@ -19,7 +19,6 @@ export default function FilterBar({ filters, onChangeFilters }) {
             case 4:
                 onChangeFilters(prev => ({ ...prev, sortNameAsc: false, sortNameDesc: false, sortPriceMin: false, sortPriceMax: true }));
                 break;
-
             default:
                 break;
         }

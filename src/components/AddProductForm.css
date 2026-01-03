@@ -1,4 +1,4 @@
-.form{
+.form {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -8,17 +8,27 @@
     gap: 10px;
 }
 
-.container-input{
+.container-input {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-input{
+input {
     height: 32px;
     border-radius: 10px;
 }
 
-.form button{
+.form button {
     margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+    .form {
+        align-items: center;
+    }
+
+    .container-input {
+        justify-content: center;
+    }
 }

@@ -21,7 +21,7 @@ export default function AddProductForm({ onAdd }) {
             return;
         }
         onAdd({ ...formData, id: Date.now() });
-        setFormData({ name: '', category: '', price: '', qunatity: '' });
+        setFormData({ name: '', category: '', price: '', quantity: '' });
     }
 
     return (
