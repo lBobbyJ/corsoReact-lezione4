@@ -17,7 +17,7 @@ function App() {
 
   const [filters, setFilters] = useState(() => {
     const savedFilters = localStorage.getItem("filters");
-    return savedFilters ? JSON.parse(savedFilters) : []
+    return savedFilters ? JSON.parse(savedFilters) : {}
   })
 
   useEffect(() => {
@@ -32,8 +32,7 @@ function App() {
     setTimeout(() =>
       setProducts((prev) => {
         return prev.filter(product => product.id !== id)
-      }), 250)
-    
+      }), 250) 
   }
 
   return (
